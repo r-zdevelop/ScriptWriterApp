@@ -1,9 +1,16 @@
-﻿namespace ScriptWriterApp;
+﻿using Microsoft.Maui.Controls;
 
-public partial class AppShell : Shell
+namespace ScriptWriterApp
 {
-	public AppShell()
+	public partial class AppShell : Shell
 	{
-		InitializeComponent();
+		public AppShell()
+		{
+			InitializeComponent();
+
+			// Register routes if necessary
+			Routing.RegisterRoute("IntroPage", typeof(Views.IntroPage));
+			Routing.RegisterRoute("MainPage", typeof(Views.MainPage));
+		}
 	}
 }

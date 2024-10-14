@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="ScriptWriterApp.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ScriptWriterApp"
-    Shell.FlyoutBehavior="Disabled"
-    Title="ScriptWriterApp">
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ScriptWriterApp.Views"
+       x:Class="ScriptWriterApp.AppShell">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!-- Define the routes for your pages -->
+    <ShellContent Route="IntroPage"
+            ContentTemplate="{DataTemplate local:IntroPage}"/>
+    <ShellContent Route="MainPage"
+            ContentTemplate="{DataTemplate local:MainPage}"/>
 
 </Shell>
