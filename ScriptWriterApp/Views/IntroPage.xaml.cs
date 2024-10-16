@@ -35,5 +35,20 @@ namespace ScriptWriterApp.Views
 
             await Navigation.PushAsync(new MainPage(scriptName, filePath));
         }
+
+        private async void OnStartScriptClicked(object sender, EventArgs e)
+        {
+            string scriptName = ScriptNameEntry.Text;
+
+            if (string.IsNullOrWhiteSpace(scriptName))
+            {
+                await DisplayAlert("Error", "Script name is required", "OK");
+                return;
+            }
+
+            // Save script name and navigate to SceneForm
+            await Navigation.PushAsync(new SceneForm());
+        }
+
     }
 }

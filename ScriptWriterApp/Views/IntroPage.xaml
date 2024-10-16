@@ -3,25 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScriptWriterApp.Views.IntroPage">
 
-    <VerticalStackLayout Padding="20"
-                         HorizontalOptions="Center"
-                         VerticalOptions="Center">
-        <Label Text="Welcome to Script Writer"
-               FontSize="32"
-               HorizontalOptions="Center"/>
-        <Entry x:Name="ScriptNameEntry"
-               Placeholder="Enter new script name..."
-               FontSize="18"
-               WidthRequest="300"/>
-        <Button Text="Start Writing"
-                Clicked="OnStartWritingClicked"
-                FontSize="18"/>
-        <Label Text="OR"
-               FontSize="20"
-               HorizontalOptions="Center"
-               Margin="20"/>
-        <Button Text="Load Existing Script"
-                Clicked="OnLoadScriptClicked"
-                FontSize="18"/>
-    </VerticalStackLayout>
+       <VerticalStackLayout Padding="20"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+              <Label Text="Welcome to Script Writer"
+                     FontSize="32"
+                     HorizontalOptions="Center"/>
+              <Entry x:Name="ScriptNameEntry"
+                     Placeholder="Enter new script name..."
+                     FontSize="18"
+                     WidthRequest="300"/>
+              <Button Text="Start Writing"
+                      Clicked="OnStartScriptClicked"
+                      FontSize="18"/>
+              <Label Text="OR"
+                     FontSize="20"
+                     HorizontalOptions="Center"
+                     Margin="20"/>
+              <Button Text="Load Existing Script"
+                      Clicked="OnLoadScriptClicked"
+                      FontSize="18"/>
+       </VerticalStackLayout>
 </ContentPage>

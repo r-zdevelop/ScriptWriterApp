@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:ScriptWriterApp.Views"
        x:Class="ScriptWriterApp.AppShell">
 
-    <!-- Define the routes for your pages -->
-    <ShellContent Route="IntroPage"
-            ContentTemplate="{DataTemplate local:IntroPage}"/>
-    <ShellContent Route="MainPage"
-            ContentTemplate="{DataTemplate local:MainPage}"/>
+        <!-- Define the routes for your pages -->
+        <ShellContent Route="IntroPage"
+                        ContentTemplate="{DataTemplate local:IntroPage}"/>
+        <ShellContent Route="SceneForm"
+                        ContentTemplate="{DataTemplate local:SceneForm}"/>
+        <ShellContent Route="CharacterForm"
+                        ContentTemplate="{DataTemplate local:CharacterForm}"/>
+        <ShellContent Route="DialogueSequenceForm"
+                        ContentTemplate="{DataTemplate local:DialogueSequenceForm}"/>
+        <ShellContent Route="StageForm"
+                        ContentTemplate="{DataTemplate local:StageForm}"/>
 
 </Shell>

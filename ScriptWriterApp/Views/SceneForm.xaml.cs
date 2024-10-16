@@ -40,5 +40,23 @@ namespace ScriptWriterApp.Views
             // Save or pass the scene
             await DisplayAlert("Success", $"Scene {title} saved!", "OK");
         }
+
+        // Navigation to Character Form
+        private async void OnNewCharacterClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CharacterForm());
+        }
+
+        // Navigation to Dialogue Sequence Form
+        private async void OnNewDialogueSequenceClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DialogueSequenceForm());
+        }
+
+        // Navigation to Stage Form
+        private async void OnNewStageClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StageForm());
+        }
     }
 }

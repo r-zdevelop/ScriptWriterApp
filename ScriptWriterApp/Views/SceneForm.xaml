@@ -2,40 +2,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScriptWriterApp.Views.SceneForm">
-    <StackLayout Padding="10">
-        <Label Text="Add or Edit Scene"
-                FontSize="20"
-                HorizontalOptions="Center"/>
 
-        <!-- Title Entry -->
-        <Label Text="Scene Title"/>
-        <Entry x:Name="TitleEntry"
-                Placeholder="Enter scene title"/>
+        <StackLayout Padding="10">
+                <!-- Buttons for creating new entities -->
+                <StackLayout Orientation="Horizontal"
+                                HorizontalOptions="Center">
+                        <Button Text="New Character"
+                                        Clicked="OnNewCharacterClicked"/>
+                        <Button Text="New Dialogue Sequence"
+                                        Clicked="OnNewDialogueSequenceClicked"/>
+                        <Button Text="New Stage"
+                                        Clicked="OnNewStageClicked"/>
+                </StackLayout>
 
-        <!-- Stage Entry -->
-        <Label Text="Stage"/>
-        <Entry x:Name="StageEntry"
-                Placeholder="Enter stage"/>
+                <!-- Existing Scene Form content -->
+                <Label Text="Add or Edit Scene"
+                                FontSize="20"
+                                HorizontalOptions="Center"/>
 
-        <!-- Time of Day Picker -->
-        <Label Text="Time of Day"/>
-        <Picker x:Name="TimeOfDayPicker">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Day</x:String>
-                    <x:String>Evening</x:String>
-                    <x:String>Night</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+                <!-- Title Entry -->
+                <Label Text="Scene Title"/>
+                <Entry x:Name="TitleEntry"
+                                Placeholder="Enter scene title"/>
 
-        <!-- Description Entry -->
-        <Label Text="Description"/>
-        <Editor x:Name="DescriptionEditor"
-                Placeholder="Enter scene description"/>
+                <!-- Stage Entry -->
+                <Label Text="Stage"/>
+                <Entry x:Name="StageEntry"
+                                Placeholder="Enter stage"/>
 
-        <!-- Save Button -->
-        <Button Text="Save"
-                Clicked="OnSaveClicked"/>
-    </StackLayout>
+                <!-- Time of Day Picker -->
+                <Label Text="Time of Day"/>
+                <Picker x:Name="TimeOfDayPicker">
+                        <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                        <x:String>Day</x:String>
+                                        <x:String>Evening</x:String>
+                                        <x:String>Night</x:String>
+                                </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+                <!-- Description Entry -->
+                <Label Text="Description"/>
+                <Editor x:Name="DescriptionEditor"
+                                Placeholder="Enter scene description"/>
+
+                <!-- Save Button -->
+                <Button Text="Save"
+                                Clicked="OnSaveClicked"/>
+        </StackLayout>
 </ContentPage>
